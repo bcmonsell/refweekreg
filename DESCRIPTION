@@ -1,0 +1,27 @@
+Package: refweekreg
+Title: Generate reference week regressors
+Version: 2.0
+Authors@R: 
+    person(given = "Brian",
+           family = "Monsell",
+           role = c("aut", "cre"),
+           email = "Monsell.Brian@bls.gov")
+Description: Generates reference week regressors to include in time series models. 
+    These refernce week regressors are indicator variables that have a 1 if the week 
+    a given US holiday occurs in is a reference week, 0 otherwise. 
+    Routines also generate the day that starts the reference week 
+    (usually the week that contains the 12th of the month). 
+    Another routine generates a 4 or 5 week regressor used to calendar adjust
+    selected CES series.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    lubridate,
+    timeDate
+Suggests:
+    seasonal
+Depends: 
+    R (>= 2.10)
