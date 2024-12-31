@@ -4,7 +4,12 @@
 \alias{save_user_reg}
 \title{save user regression matrix}
 \usage{
-save_user_reg(this_reg = NULL, this_reg_file = NULL)
+save_user_reg(
+  this_reg = NULL,
+  this_reg_file = NULL,
+  add_dates = TRUE,
+  start_date = NULL
+)
 }
 \arguments{
 \item{this_reg}{double precision time series array or matrix to be saved.
@@ -12,6 +17,13 @@ This is a required argument.}
 
 \item{this_reg_file}{character string; name of file time series array or matrix to be saved to.
 This is a required argument.}
+
+\item{add_dates}{logical scalar; save the file with dates on each record (datevalue format).
+Default is TRUE.}
+
+\item{start_date}{Integer vector of length 2, Start date for series to be stored, where the
+first element is the year and the second element is the month or quarter..
+Default is start of series.}
 }
 \value{
 file with user-defined regressors will be produced.
@@ -21,7 +33,7 @@ Save a user-defined regression array or matrix with time series attributes to an
 in X-13ARIMA-SEATS' datevalue format
 }
 \details{
-Version 2.0, 5/6/2024
+Version 3.2, 12/27/2024
 }
 \examples{
 gf_years <- c(2001, 2006, 2017, 2022)

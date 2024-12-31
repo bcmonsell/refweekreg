@@ -1,6 +1,6 @@
 Package: refweekreg
 Title: Generate reference week regressors
-Version: 2.0
+Version: 2.1
 Authors@R: 
     person(given = "Brian",
            family = "Monsell",
@@ -20,8 +20,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports:
     lubridate,
+	stringr,
     timeDate
 Suggests:
     seasonal
 Depends: 
-    R (>= 2.10)
+    R (>= 3.6)
